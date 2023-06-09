@@ -21,21 +21,14 @@ const LandingPage = () => {
   const [favoritePokemons, setFavoritePokemons] = useState([]);
 
   useEffect(() => {
-    fetchPokemonList(currentPage);
+    fetchPokemonList();
     setFavoritePokemons(getFavoritePokemons());
-  }, [currentPage]);
+  }, []);
 
-  const fetchPokemonList = async (page) => {
-    const limit = 24;
-    // const offset = (page - 1) * limit;
+  const fetchPokemonList = async () => {
     const response = await getPokemonList(864);
     setPokemonList(response.results);
-    const totalPagesCount =
-      displayedPokemonList.length > 0
-        ? Math.round(displayedPokemonList.length / limit)
-        : Math.round(response.results.length / limit);
-    setTotalPages(36);
-    console.log(response.results.length);
+    setTotalPages(Math.ceil(response.results.length / 24));
   };
 
   const handlePaginationClick = (page) => {
@@ -47,12 +40,12 @@ const LandingPage = () => {
 
   const handleSearchInputChange = (e) => {
     setSearchQuery(e.target.value);
-    setCurrentPage(currentPage);
+    setCurrentPage(1); // Reset the current page when search query changes
   };
 
   const handleSortOptionChange = (e) => {
     setSortOption(e.target.value);
-    setCurrentPage(currentPage);
+    setCurrentPage(1); // Reset the current page when sort option changes
   };
 
   const handleFavoriteClick = (pokemonName) => {
@@ -80,8 +73,10 @@ const LandingPage = () => {
     return filteredList;
   };
 
-  const displayedPokemonList = filterPokemonList(
-    pokemonList.slice((currentPage - 1) * 24, currentPage * 24)
+  const displayedPokemonList = filterPokemonList(pokemonList);
+  const paginatedPokemonList = displayedPokemonList.slice(
+    (currentPage - 1) * 24,
+    currentPage * 24
   );
   const showPagination =
     displayedPokemonList.length > 1 && totalPages > 1 && totalPages !== 1;
@@ -101,12 +96,12 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {displayedPokemonList.length > 0 ? (
+      {paginatedPokemonList.length > 0 ? (
         <div className="row">
-          {displayedPokemonList.map((pokemon) => (
+          {paginatedPokemonList.map((pokemon) => (
             <div
               className={`col-md-${
-                displayedPokemonList.length === 1 ? "12 " : "4"
+                paginatedPokemonList.length === 1 ? "12 " : "4"
               } mb-4`}
               key={pokemon.name}
             >
@@ -114,7 +109,7 @@ const LandingPage = () => {
                 pokemon={pokemon}
                 isFavorite={isPokemonFavorite(pokemon.name)}
                 onFavoriteClick={handleFavoriteClick}
-                singleCard={displayedPokemonList.length === 1}
+                singleCard={paginatedPokemonList.length === 1}
               />
             </div>
           ))}

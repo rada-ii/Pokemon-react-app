@@ -29,7 +29,9 @@ const PokemonDetailsPage = () => {
         const details = {
           name: pokemonName,
           species: data.species.name,
-          img: data.sprites.front_default,
+          img: `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${padId(
+            data.id
+          )}.png`,
           hp: data.stats[0].base_stat,
           attack: data.stats[1].base_stat,
           defense: data.stats[2].base_stat,
@@ -46,6 +48,11 @@ const PokemonDetailsPage = () => {
 
     fetchPokemonDetails();
   }, [pokemonName]);
+
+  const padId = (id) => {
+    const paddedId = String(id).padStart(3, "0");
+    return paddedId;
+  };
 
   if (!pokemonDetails.name) {
     return <div>Loading...</div>;

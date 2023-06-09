@@ -1,27 +1,29 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const ScrollButtons = () => {
+  const [showScrollUp, setShowScrollUp] = useState(false);
+  const [showScrollDown, setShowScrollDown] = useState(true);
   const scrollTopBtnRef = useRef(null);
   const scrollDownBtnRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        scrollTopBtnRef.current.style.display = "block";
+      const scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (scrollTop > 20) {
+        setShowScrollUp(true);
       } else {
-        scrollTopBtnRef.current.style.display = "none";
+        setShowScrollUp(false);
       }
 
       if (
-        window.innerHeight + window.pageYOffset >=
+        scrollTop + window.innerHeight >=
         document.documentElement.offsetHeight - 20
       ) {
-        scrollDownBtnRef.current.style.display = "none";
+        setShowScrollDown(false);
       } else {
-        scrollDownBtnRef.current.style.display = "block";
+        setShowScrollDown(true);
       }
     };
 
@@ -45,19 +47,26 @@ const ScrollButtons = () => {
 
   return (
     <div className="scrolls">
-      <ion-icon
-        ref={scrollTopBtnRef}
-        className="scroll-up"
-        name="arrow-up-circle-outline"
+      <div
+        className="up"
+        style={{ display: showScrollUp ? "block" : "none" }}
         onClick={scrollToTop}
-      ></ion-icon>
-
-      <ion-icon
-        ref={scrollDownBtnRef}
-        className="scroll-down"
-        name="arrow-down-circle-outline"
-        onClick={scrollToBottom}
-      ></ion-icon>
+      >
+        <ion-icon
+          ref={scrollTopBtnRef}
+          className="scroll-up"
+          name="arrow-up-circle-outline"
+        ></ion-icon>
+      </div>
+      {showScrollDown && (
+        <div className="down" onClick={scrollToBottom}>
+          <ion-icon
+            ref={scrollDownBtnRef}
+            className="scroll-down"
+            name="arrow-down-circle-outline"
+          ></ion-icon>
+        </div>
+      )}
     </div>
   );
 };

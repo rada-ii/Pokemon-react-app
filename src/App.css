@@ -1,3 +1,7 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .footer {
   margin-top: 4rem;
 }
@@ -40,8 +44,10 @@ a {
 .header {
   font-size: 2rem;
 }
+
 nav {
-  font-size: 1.5rem;
+  font-family: "Coiny", sans-serif !important;
+  font-size: 2rem;
 }
 
 .card {
@@ -161,6 +167,7 @@ nav {
 .card-title {
   font-size: 2rem;
   margin-left: 1.5rem;
+  font-family: "Coiny", sans-serif !important;
 }
 
 .sad {
@@ -180,9 +187,9 @@ nav {
   padding-bottom: 2rem;
 }
 
-.card-img-top {
+/* .card-img-top {
   transform: scale(1.2);
-}
+} */
 
 strong {
   color: #0d6efd;
@@ -216,14 +223,11 @@ input.form-control:focus,
 select.form-control:focus {
   outline: none !important;
   box-shadow: none !important;
+  margin-bottom: 3rem !important;
 }
 
 .scrolls {
-  /* width: 3rem !important;
-  height: 3rem !important; */
-  /* display: none; */
   position: fixed;
-
   bottom: 15rem;
   right: 1rem !important;
   cursor: pointer;
@@ -232,15 +236,19 @@ select.form-control:focus {
   font-size: 3rem;
 }
 
-.scroll-down {
-  bottom: 15rem;
-}
-
-.scroll-up {
-  bottom: 10rem;
+.up {
+  /* bottom: 10rem; */
   display: none;
 }
 
 .scrolls:hover {
-  color: #69a997;
+  color: #0d6efd;
 }
+.row:nth-child(1),
+.row:nth-child(2) {
+  margin-top: 5rem !important;
+}
+
+/* .row:nth-child(1) {
+  margin-top: 5rem !important;
+} */
