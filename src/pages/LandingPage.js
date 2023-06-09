@@ -79,7 +79,8 @@ const LandingPage = () => {
     currentPage * 24
   );
   const showPagination =
-    displayedPokemonList.length > 1 && totalPages > 1 && totalPages !== 1;
+    displayedPokemonList.length > 24 && totalPages > 1 && totalPages !== 1;
+  const showNoResults = displayedPokemonList.length === 0;
 
   return (
     <div className="container mt-4 mb-5 landing-page-container">
@@ -96,7 +97,9 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {paginatedPokemonList.length > 0 ? (
+      {showNoResults ? (
+        <NoResults />
+      ) : (
         <div className="row">
           {paginatedPokemonList.map((pokemon) => (
             <div
@@ -114,8 +117,6 @@ const LandingPage = () => {
             </div>
           ))}
         </div>
-      ) : (
-        <NoResults />
       )}
 
       {showPagination && (
