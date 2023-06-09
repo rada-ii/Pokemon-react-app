@@ -27,7 +27,7 @@ You may also see any lint errors in the console.
 
 
 After that, run the following command in the terminal:
-npm i
+### `npm i`
 to install all dependencies, router, and other necessary components required for the app to work as I have designed it.
 
 
