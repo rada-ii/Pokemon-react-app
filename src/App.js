@@ -9,6 +9,7 @@ import NoResults from "./pages/NoResults";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import FavoritesPage from "./components/FavoritesPage";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +36,7 @@ const App = () => {
                 element={<PokemonDetailsPage />}
               />
               <Route path="/about" element={<About />} />
+              {/* <Route path="/favorites" element={<FavoritesPage />} /> */}
               <Route path="*" element={<NoResults />} />
             </Routes>
             <Footer />

@@ -33,19 +33,19 @@ const LandingPage = () => {
 
   const handlePaginationClick = (page) => {
     if (page < 1 || page > totalPages) {
-      return; // Ignore invalid page numbers
+      return;
     }
     setCurrentPage(page);
   };
 
   const handleSearchInputChange = (e) => {
     setSearchQuery(e.target.value);
-    setCurrentPage(1); // Reset the current page when search query changes
+    setCurrentPage(1);
   };
 
   const handleSortOptionChange = (e) => {
     setSortOption(e.target.value);
-    setCurrentPage(1); // Reset the current page when sort option changes
+    setCurrentPage(1);
   };
 
   const handleFavoriteClick = (pokemonName) => {
@@ -78,8 +78,17 @@ const LandingPage = () => {
     (currentPage - 1) * 24,
     currentPage * 24
   );
+
+  const totalDisplayedResults = displayedPokemonList.length;
+
+  const remainingResults = totalDisplayedResults - (currentPage - 1) * 24;
+
+  const maxPages = Math.ceil(totalDisplayedResults / 24);
+
   const showPagination =
-    displayedPokemonList.length > 24 && totalPages > 1 && totalPages !== 1;
+    remainingResults > 24 ||
+    (remainingResults <= 24 && currentPage !== maxPages);
+
   const showNoResults = displayedPokemonList.length === 0;
 
   return (
@@ -104,7 +113,7 @@ const LandingPage = () => {
           {paginatedPokemonList.map((pokemon) => (
             <div
               className={`col-md-${
-                paginatedPokemonList.length === 1 ? "12 " : "4"
+                paginatedPokemonList.length === 1 ? "12" : "4"
               } mb-4`}
               key={pokemon.name}
             >
@@ -119,7 +128,7 @@ const LandingPage = () => {
         </div>
       )}
 
-      {showPagination && (
+      {showPagination && !showNoResults && (
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}

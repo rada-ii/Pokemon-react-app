@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import RefreshIcon from "@mui/icons-material/Refresh";
+// import FavoritesPage from "./components/FavoritesPage";
+// import App from "../App";
 
 const Header = () => {
   return (
@@ -28,6 +30,9 @@ const Header = () => {
           >
             <RefreshIcon style={{ fontSize: 45 }} />
           </button>
+          {/* <a href="/favorites" className="text-white mx-2">
+            Favorites
+          </a> */}
         </nav>
       </div>
     </header>

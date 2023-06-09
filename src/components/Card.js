@@ -20,10 +20,12 @@ const Card = ({ pokemon }) => {
   useEffect(() => {
     // Fetch and set the Pokémon image
     const fetchPokemonImage = async () => {
-      const paddedIndex = pokemon.url.split("/")[6];
-      const index = String(paddedIndex).padStart(3, "0");
-      const imageUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png`;
-      setPokemonImage(imageUrl);
+      if (pokemon.url) {
+        const paddedIndex = pokemon.url.split("/")[6];
+        const index = String(paddedIndex).padStart(3, "0");
+        const imageUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png`;
+        setPokemonImage(imageUrl);
+      }
     };
 
     fetchPokemonImage();
