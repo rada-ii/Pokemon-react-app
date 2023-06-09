@@ -1,38 +1,201 @@
-.App {
+.footer {
+  margin-top: 4rem;
+}
+
+.single-card-row .col {
+  flex-grow: 1;
+  min-width: 100%;
+  max-width: 100%;
+  margin-top: 10rem;
+}
+
+.single-card-row .col img {
+  transform: scale(2);
+}
+
+.landing-page-container {
+  margin-bottom: 5rem !important;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  border: none;
+  background-color: #0d6efd !important;
+  padding: 0 !important;
+}
+
+.refresh {
+  height: 2rem;
+}
+
+.header {
+  font-size: 2rem;
+}
+nav {
+  font-size: 1.5rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card-header {
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border: none;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-top: none;
+  gap: 1rem !important;
+}
+
+.btn-add {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.btn-remove {
+  background-color: #cdcdcd;
+  color: #ff0000;
+}
+
+.btn-add:hover {
+  background-color: #c62828;
+}
+
+.btn-remove:hover {
+  background-color: #ef9a9a;
+}
+
+.pokemon-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .card-footer {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 512px) {
+  .card-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+  /* 
+  .card-title {
+    margin-right: 1rem;
+  } */
+
+  .card-footer {
+    gap: 1rem;
+  }
+
+  .sad {
+    margin-top: 2rem;
+  }
+
+  .card-footer {
+    display: flex;
+    flex-direction: row !important;
+  }
+}
+
+.pagination button:focus,
+.pagination button:active {
+  box-shadow: none;
+}
+
+.card {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  /* border-radius: 2rem; */
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #ffcc03;
+}
+
+.card {
+  transition: transform 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-left: 1.5rem;
+}
+
+.sad {
+  text-align: center;
+  margin-top: 5rem;
+  /* font-size: 4rem; */
+}
+
+.single {
+  margin: 5rem auto !important;
+  width: 25rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-text {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-img-top {
+  transform: scale(1.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+strong {
+  color: #0d6efd;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  max-width: 13rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-footer {
+  background-color: #ffcc03;
+}
+
+.card-header,
+.about {
+  background-color: #ffcc03;
+}
+
+.about {
+  margin: 5rem auto;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.about-title {
+  text-align: center;
+  padding-bottom: 2rem;
 }
