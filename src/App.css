@@ -103,6 +103,19 @@ nav {
   }
 }
 
+@media (max-width: 813px) {
+  /* .card {
+    margin: 1rem !important;
+  } */
+
+  .scrolls {
+    /* width: 1.5rem !important;
+    height: 1.5rem !important; */
+    right: 0.3rem !important;
+    font-size: 2rem !important;
+  }
+}
+
 @media (max-width: 610px) {
   .card {
     margin: 1rem !important;
@@ -111,7 +124,9 @@ nav {
   .scrolls {
     /* width: 1.5rem !important;
     height: 1.5rem !important; */
-    right: 0.3rem !important;
+    right: 0 !important;
+    font-size: 1.5rem !important;
+    bottom: 8rem !important;
   }
 }
 
@@ -229,7 +244,7 @@ select.form-control:focus {
 .scrolls {
   position: fixed;
   bottom: 15rem;
-  right: 1rem !important;
+  right: 1rem;
   cursor: pointer;
   color: #ffcc03;
   margin-left: 1rem !important;
