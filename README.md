@@ -31,7 +31,11 @@ After that, run the following command in the terminal:
 to install all dependencies, router, and other necessary components required for the app to work as I have designed it.
 
 
-The objective of this project is to create a web application using React.js that interacts with the PokeAPI (https://pokeapi.co/). The application will consist of two pages: the Landing Page, which displays a grid of Pokémon cards, and the Pokemon Details Page, which shows detailed information about a specific Pokémon. The project will display the first 864 Pokémon characters across 36 pages, with 24 Pokémon cards on each page. The pagination will display 5 buttons, with the active button centered except on the first and last pages. Additionally, the project should include features such as search functionality, the ability to mark favorite Pokémon, and persistent data storage using Local Storage.
+The objective of this project is to create a web application using React.js that interacts with the PokeAPI (https://pokeapi.co/).
+The application consists of two pages: the Landing Page, which displays a grid of Pokémon cards, and the Pokemon Details Page, which shows detailed information about a specific Pokémon. 
+The project displays the first 864 Pokémon characters across 36 pages, with 24 Pokémon cards on each page. 
+The pagination  displays 5 buttons, with the active button centered except on the first and last pages. 
+Additionally, the project  includes features such as search functionality, the ability to mark favorite Pokémon, and persistent data storage using Local Storage.
 
 Features:
 
@@ -48,8 +52,9 @@ Allows users to mark their favorite Pokémon by clicking a like button.
 Pokémon Info Page:
 
 Displays detailed information about a specific Pokémon.
-Information includes the Pokémon's name, abilities, types, and any other relevant details.
-I have implemented persistent data storage using Local Storage to store the user's favorite Pokémon. The favorite Pokémon will persist even after the user refreshes the page.
+Information includes the Pokémon's name, abilities, types, weight, hp, defence, atack, species.
+I have implemented persistent data storage using Local Storage to store the user's favorite Pokémon. 
+The favorite Pokémon will persist even after the user refreshes the page.
 
 Technologies:
 
@@ -70,12 +75,9 @@ Favicon image to be displayed in the tab.
 Imported Google Fonts.
 Scroll button to navigate the page.
 Added logo image inside the header.
-Added a footer with my name and the current date, which is automatically displayed.
-        
+Added a footer with my name and the current date, which is automatically displayed.        
 The project is hosted on GitHub, where you can access the entire codebase. You can visit the GitHub repository to view the code and explore the project in detail.
-
-Additionally, the project is also deployed on the Vercel platform, allowing you to see how it looks and functions in a live environment. You can visit the Vercel deployment to interact with the web application and experience its features firsthand.
-
+Additionally, the project is also deployed on the Vercel platform, allowing you to see how it looks and functions in a live environment. 
         
    
 
