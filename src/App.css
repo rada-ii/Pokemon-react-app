@@ -97,6 +97,18 @@ nav {
   }
 }
 
+@media (max-width: 610px) {
+  .card {
+    margin: 1rem !important;
+  }
+
+  .scrolls {
+    /* width: 1.5rem !important;
+    height: 1.5rem !important; */
+    right: 0.3rem !important;
+  }
+}
+
 @media (max-width: 512px) {
   .card-header {
     display: flex;
@@ -132,9 +144,9 @@ nav {
 
 .card {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-  /* border-radius: 2rem; */
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 0.5rem;
+  /* border-top-right-radius: 0;
+  border-bottom-left-radius: 0; */
   background-color: #ffcc03;
 }
 
@@ -204,4 +216,31 @@ input.form-control:focus,
 select.form-control:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+.scrolls {
+  /* width: 3rem !important;
+  height: 3rem !important; */
+  /* display: none; */
+  position: fixed;
+
+  bottom: 15rem;
+  right: 1rem !important;
+  cursor: pointer;
+  color: #ffcc03;
+  margin-left: 1rem !important;
+  font-size: 3rem;
+}
+
+.scroll-down {
+  bottom: 15rem;
+}
+
+.scroll-up {
+  bottom: 10rem;
+  display: none;
+}
+
+.scrolls:hover {
+  color: #69a997;
 }

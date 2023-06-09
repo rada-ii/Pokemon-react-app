@@ -10,6 +10,7 @@ import SearchBar from "../components/SearchBar";
 import SortInput from "../components/SortInput";
 import Pagination from "../components/Pagination";
 import NoResults from "./NoResults";
+import ScrollButtons from "../components/ScrollButtons";
 
 const LandingPage = () => {
   const [pokemonList, setPokemonList] = useState([]);
@@ -26,8 +27,8 @@ const LandingPage = () => {
 
   const fetchPokemonList = async (page) => {
     const limit = 24;
-    const offset = (page - 1) * limit;
-    const response = await getPokemonList(limit, offset);
+    // const offset = (page - 1) * limit;
+    const response = await getPokemonList(864);
     setPokemonList(response.results);
     const totalPagesCount =
       displayedPokemonList.length > 0
@@ -79,7 +80,9 @@ const LandingPage = () => {
     return filteredList;
   };
 
-  const displayedPokemonList = filterPokemonList(pokemonList);
+  const displayedPokemonList = filterPokemonList(
+    pokemonList.slice((currentPage - 1) * 24, currentPage * 24)
+  );
   const showPagination =
     displayedPokemonList.length > 1 && totalPages > 1 && totalPages !== 1;
 
@@ -127,6 +130,7 @@ const LandingPage = () => {
           onPageClick={handlePaginationClick}
         />
       )}
+      <ScrollButtons />
     </div>
   );
 };
