@@ -45,7 +45,7 @@ const LandingPage = () => {
 
   const handleSortOptionChange = (e) => {
     setSortOption(e.target.value);
-    setCurrentPage(1);
+    // setCurrentPage(1);
   };
 
   const handleFavoriteClick = (pokemonName) => {

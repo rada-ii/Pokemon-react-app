@@ -36,7 +36,7 @@ const App = () => {
                 element={<PokemonDetailsPage />}
               />
               <Route path="/about" element={<About />} />
-              {/* <Route path="/favorites" element={<FavoritesPage />} /> */}
+              <Route path="/favorites" element={<FavoritesPage />} />
               <Route path="*" element={<NoResults />} />
             </Routes>
             <Footer />

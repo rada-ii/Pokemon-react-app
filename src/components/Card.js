@@ -17,13 +17,29 @@ const Card = ({ pokemon }) => {
     setIsFavorite(isPokemonFavorite(pokemon.name));
   }, [pokemon.name]);
 
+  // useEffect(() => {
+  //   // Fetch and set the Pokémon image
+  //   const fetchPokemonImage = async () => {
+  //     if (pokemon.url) {
+  //       const paddedIndex = pokemon.url.split("/")[6];
+  //       const index = String(paddedIndex).padStart(3, "0");
+  //       const imageUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png`;
+  //       setPokemonImage(imageUrl);
+  //     }
+  //   };
+
+  //   fetchPokemonImage();
+  // }, [pokemon.url]);
+
   useEffect(() => {
     // Fetch and set the Pokémon image
     const fetchPokemonImage = async () => {
       if (pokemon.url) {
-        const paddedIndex = pokemon.url.split("/")[6];
-        const index = String(paddedIndex).padStart(3, "0");
-        const imageUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index}.png`;
+        const index = pokemon.url.match(/\/(\d+)\//)[1];
+        const imageUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${index.padStart(
+          3,
+          "0"
+        )}.png`;
         setPokemonImage(imageUrl);
       }
     };
