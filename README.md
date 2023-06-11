@@ -1,4 +1,4 @@
-checkoutlive:https://pokemon-react-app-gamma.vercel.app/
+checkout live: https://pokemon-react-app-gamma.vercel.app/
 
 
 
