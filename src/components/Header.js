@@ -30,9 +30,6 @@ const Header = () => {
           >
             <RefreshIcon style={{ fontSize: 45 }} />
           </button>
-          {/* <a href="/favorites" className="text-white mx-2">
-            Favorites
-          </a> */}
         </nav>
       </div>
     </header>
