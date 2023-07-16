@@ -109,8 +109,6 @@ nav {
   } */
 
   .scrolls {
-    /* width: 1.5rem !important;
-    height: 1.5rem !important; */
     right: 0.3rem !important;
     font-size: 2rem !important;
   }
@@ -122,8 +120,6 @@ nav {
   }
 
   .scrolls {
-    /* width: 1.5rem !important;
-    height: 1.5rem !important; */
     right: 0 !important;
     font-size: 1.5rem !important;
     bottom: 8rem !important;
@@ -139,10 +135,6 @@ nav {
   .header {
     flex-direction: column;
   }
-  /* 
-  .card-title {
-    margin-right: 1rem;
-  } */
 
   .card-footer {
     gap: 1rem;
@@ -263,7 +255,3 @@ select.form-control:focus {
 .row:nth-child(2) {
   margin-top: 5rem !important;
 }
-
-/* .row:nth-child(1) {
-  margin-top: 5rem !important;
-} */
