@@ -22,7 +22,7 @@
 
 ## 📸 Screenshots
 
-<!-- Add your screenshots here -->
+![App Screenshot](pokemon.png)
 
 ## 📦 Getting Started
 
