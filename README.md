@@ -1,85 +1,93 @@
-checkout live: https://pokemon-react-app-gamma.vercel.app/
+# Pokemon React App
+
+**Pokemon React App** is a modern web application built with **React.js** that interacts with the **PokeAPI** to display and manage information about Pokemon through an interactive user interface.
+
+## 🚀 Features
+
+* 📋 **Pokemon Display** – Shows 864 Pokemon across 36 pages (24 per page)
+* 🔍 **Search Functionality** – Search Pokemon by name
+* 🔄 **Sorting Options** – Sort by A-Z, Z-A, or default order
+* ❤️ **Favorite Pokemon** – Mark and save your favorite Pokemon
+* 📱 **Responsive Design** – Optimized for all screen sizes
+* 📄 **Pagination** – Navigate through pages with prev/next buttons
+* 💾 **Local Storage** – Favorites persist after page refresh
+
+## 🛠️ Built With
+
+* **React.js** – Main JavaScript framework
+* **React Router** – For navigation between pages
+* **Axios** – For making HTTP requests to the PokeAPI
+* **Bootstrap** – For styling and layout consistency
+* **Local Storage** – For storing favorite Pokemon data
+
+## 📸 Screenshots
+
+<!-- Add your screenshots here -->
+
+## 📦 Getting Started
+
+### Installation
+
+```bash
+git clone https://github.com/YOUR-USERNAME/pokemon-react-app.git
+cd pokemon-react-app
+npm i
+```
+
+### Start Development Server
+
+```bash
+npm start
+```
+
+App will be available at:
+
+```
+http://localhost:3000
+```
+
+## 📄 Pages
+
+1. **Landing Page**
+   * Displays a grid of Pokemon cards
+   * Includes search and sorting options
+   * Allows marking Pokemon as favorites
+   * Features pagination for navigating through the collection
+
+2. **Pokemon Details Page**
+   * Shows detailed information about the selected Pokemon
+   * Information includes name, abilities, types, weight, HP, defense, attack, and species
+
+3. **About Page**
+   * Describes the project objectives and features
+
+## 🌐 Live Demo
+
+👉 [Deployed version on Vercel](https://pokemon-react-app-gamma.vercel.app/)
 
 
+## ✨ Additional Features
 
+* Loading screen with animation when app starts
+* Google Fonts integration (Inter and Coiny)
+* Scroll up/down buttons for navigation
+* Responsive header with logo
+* Footer displaying author name and current date
+* Card hover animations
+* Custom styling for favorite Pokemon buttons
 
+## 🤝 Contributing
 
+Contributions are welcome! Open an issue or submit a pull request to suggest improvements.
 
+## 📄 License
 
+This project is licensed under the **MIT License**.
 
+## 👩‍💻 Author
 
+Developed by [Rada Ivankovic](https://github.com/rada-ii) ✨ 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-
-After that, run the following command in the terminal:
-### `npm i`
-to install all dependencies, router, and other necessary components required for the app to work as I have designed it.
-
-
-The objective of this project is to create a web application using React.js that interacts with the PokeAPI (https://pokeapi.co/).
-The application consists of two pages: the Landing Page, which displays a grid of Pokémon cards, and the Pokemon Details Page, which shows detailed information about a specific Pokémon. 
-The project displays the first 864 Pokémon characters across 36 pages, with 24 Pokémon cards on each page. 
-The pagination  displays 5 buttons, with the active button centered except on the first and last pages. 
-Additionally, the project  includes features such as search functionality, the ability to mark favorite Pokémon, and persistent data storage using Local Storage.
-
-Features:
-
-Search Functionality:
-
-I have implemented a search bar that allows users to search for Pokémon by name.
-It includes three search options: A-Z, Z-A, and the default preset.
-A-Z: Sorts Pokémon by name in ascending order.
-Z-A: Sorts Pokémon by name in descending order.
-Default: Resets the search to the default order.
-Favorite Pokémon:
-
-Allows users to mark their favorite Pokémon by clicking a like button.
-Pokémon Info Page:
-
-Displays detailed information about a specific Pokémon.
-Information includes the Pokémon's name, abilities, types, weight, hp, defence, atack, species.
-I have implemented persistent data storage using Local Storage to store the user's favorite Pokémon. 
-The favorite Pokémon will persist even after the user refreshes the page.
-
-Technologies:
-
-React.js: Use React.js as the primary JavaScript framework for building the application.
-Axios / Fetch: Utilize Axios or fetch for making HTTP requests to the PokeAPI.
-React Router: Use React Router for handling routing between pages.
-Local Storage: Implement Local Storage to store and retrieve the user's favorite Pokémon.
-Styling Framework: Bootstrap, for enhanced styling and layout consistency.
-
-
-Additional:
-
-In this project, there is an About page that describes the project.
-
-I have added additional features like:
-
-Favicon image to be displayed in the tab.
-Imported Google Fonts.
-Scroll button to navigate the page.
-Added logo image inside the header.
-Added a footer with my name and the current date, which is automatically displayed.        
-The project is hosted on GitHub, where you can access the entire codebase. You can visit the GitHub repository to view the code and explore the project in detail.
-Additionally, the project is also deployed on the Vercel platform, allowing you to see how it looks and functions in a live environment. 
-        
-   
-
+> "Gotta catch 'em all, one React component at a time!"
 
 
