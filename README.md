@@ -29,7 +29,7 @@
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/pokemon-react-app.git
+git clone https://github.com/rada-ii/pokemon-react-app.git
 cd pokemon-react-app
 npm i
 ```
